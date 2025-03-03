@@ -26,6 +26,7 @@ jobs:
     - name: Build and Push Image
       uses: docker/build-push-action@v6.15.0
       with:
+        context: .
         push: true
         tags: ${{ vars.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:latest
       
